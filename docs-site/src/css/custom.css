@@ -1,0 +1,187 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3578e5;
+  --ifm-color-primary-dark: #1d6aeb;
+  --ifm-color-primary-darker: #1362e8;
+  --ifm-color-primary-darkest: #0a54d1;
+  --ifm-color-primary-light: #4d89e8;
+  --ifm-color-primary-lighter: #5a91ea;
+  --ifm-color-primary-lightest: #7ca8ee;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-container-width-xl: 1024px;
+  --ifm-container-width: 960px;
+}
+
+.button--secondary {
+  color: var(--ifm-color-primary);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #5c95e8;
+  --ifm-color-primary-dark: #3f81e6;
+  --ifm-color-primary-darker: #3278e5;
+  --ifm-color-primary-darkest: #1864e2;
+  --ifm-color-primary-light: #79a9eb;
+  --ifm-color-primary-lighter: #87b2ed;
+  --ifm-color-primary-lightest: #a9c6f2;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.hero .container {
+  max-width: 800px;
+}
+
+/* Social Icon Styling */
+.social-icon {
+  display: inline-block;
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -9999px; /* Hide text */
+  margin-right: 10px; /* Spacing between icons */
+}
+
+.social-icon.facebook {
+  background-image: url('/img/icon-facebook.svg');
+}
+
+.social-icon.instagram {
+  background-image: url('/img/icon-instagram.svg');
+}
+
+.social-icon.linkedin {
+  background-image: url('/img/icon-linkedin.svg');
+}
+
+.social-icon.x {
+  background-image: url('/img/icon-x.svg');
+}
+
+/* Footer alignment for social icons */
+.footer__items {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap if space is limited */
+  justify-content: center; /* Center items within their list */
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+/* Specific alignment for the two social icon groups */
+.footer__row > div:first-child .footer__items {
+  justify-content: flex-start; /* Align first group (Facebook, Instagram) to the left */
+}
+
+.footer__row > div:last-child .footer__items {
+  justify-content: flex-end; /* Align last group (LinkedIn, X) to the right */
+}
+
+.footer__items li {
+  margin-bottom: 0; /* Remove default list item margin */
+}
+
+
+.footer {
+  background-color: #D2B48C; /* Light brown color */
+}
+
+/* For dark mode, ensure text is readable */
+[data-theme='dark'] .footer {
+  background-color: #A0522D; /* Darker brown for dark mode */
+}
+
+
+.footer__copyright {
+  color: #333333; /* Dark text for better contrast on light brown */
+}
+
+[data-theme='dark'] .footer__copyright {
+  color: white; /* Keep white text for dark mode */
+}
+
+/* Footer link colors for brown background */
+.footer a {
+  color: #333333 !important; /* Dark text for better contrast */
+}
+
+.footer a:hover {
+  color: #5a3a0a !important; /* Darker brown for hover */
+}
+
+[data-theme='dark'] .footer a {
+  color: white !important; /* Keep white text for dark mode */
+}
+
+[data-theme='dark'] .footer a:hover {
+  color: #d4af37 !important; /* Gold color for hover in dark mode */
+}
+
+/* Brand-specific colors for Instagram and LinkedIn icons in footer using mask technique */
+.footer .social-icon.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+  mask: url('/img/icon-instagram.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('/img/icon-instagram.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  width: 24px;
+  height: 24px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.footer .social-icon.linkedin {
+  background: #0077B5 !important;
+  mask: url('/img/icon-linkedin.svg') no-repeat center;
+  mask-size: contain;
+  -webkit-mask: url('/img/icon-linkedin.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  width: 24px;
+  height: 24px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+
+/* Override the button style to have white background and black text */
+.hero .button--secondary {
+  color: black !important; /* Black text */
+  background-color: white !important; /* White background */
+  border: 2px solid black !important; /* Black border */
+  transition: all 0.3s ease !important;
+  font-weight: bold !important;
+}
+
+.hero .button--secondary:hover {
+  background-color: #f5f5f5 !important; /* Light gray on hover */
+  color: black !important;
+  text-decoration: none !important;
+  border-color: black !important;
+}
+
+[data-theme='dark'] .hero .button--secondary {
+  color: black !important; /* Black text in dark mode */
+  background-color: white !important; /* White background in dark mode */
+  border: 2px solid black !important; /* Black border in dark mode */
+}
+
+[data-theme='dark'] .hero .button--secondary:hover {
+  background-color: #f5f5f5 !important; /* Light gray on hover in dark mode */
+  color: black !important;
+  border-color: black !important;
+}
+
+.cardLink {
+  display: block;
+  cursor: pointer;
+}
+
+

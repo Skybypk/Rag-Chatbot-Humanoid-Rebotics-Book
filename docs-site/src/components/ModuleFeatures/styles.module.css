@@ -1,0 +1,59 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.moduleCard {
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: 2px solid #6495ED; /* CornflowerBlue */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  cursor: inherit; /* Inherit cursor from parent */
+}
+
+[data-theme='dark'] .card {
+  border: 2px solid #ADD8E6; /* LightBlue for dark mode border */
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(100, 149, 237, 0.4); /* More prominent, blue-tinted shadow */
+  transform: translateY(-5px);
+  /* cursor: pointer; - handled by parent link */
+}
+
+.card__header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cardIcon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.card__body {
+  flex-grow: 1;
+}
+
+.card__footer {
+  margin-top: auto;
+}
+
+.cardLink {
+  display: block;
+  width: 100%;
+}
+

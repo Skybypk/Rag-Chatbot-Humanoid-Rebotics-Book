@@ -1,0 +1,32 @@
+{
+  "tutorialSidebar": [
+    {
+      "type": "doc",
+      "id": "intro"
+    },
+    {
+      "type": "doc",
+      "id": "01-introduction-to-physical-ai"
+    },
+    {
+      "type": "doc",
+      "id": "02-foundations-of-robotics"
+    },
+    {
+      "type": "doc",
+      "id": "03-human-inspired-design-principles"
+    },
+    {
+      "type": "doc",
+      "id": "04-perception-systems"
+    },
+    {
+      "type": "doc",
+      "id": "05-ai-deep-learning-and-control"
+    },
+    {
+      "type": "doc",
+      "id": "06-locomotion-and-manipulation"
+    },
+  ]
+}
