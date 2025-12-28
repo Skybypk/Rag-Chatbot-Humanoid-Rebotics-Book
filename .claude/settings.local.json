@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /s)",
+      "Bash(dir /s /b)",
+      "Bash(dir \"D:\\Quarter-4\\Projects\\Q4-hackathon-1\\docusaurus-book\\src\\pages\" /b)",
+      "Bash(npx docusaurus clear)",
+      "Bash(pip install fastapi uvicorn qdrant-client python-dotenv sentence-transformers transformers torch)"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
+app = FastAPI()
+
+# Serve favicon and other static files
+app.mount("/static", StaticFiles(directory="."), name="static")
+
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
+app = FastAPI()
+
+# Serve root folder files (favicon.ico)
+app.mount("/static", StaticFiles(directory="."), name="static")
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def health_check():
+    return {"status": "running"}
+  
