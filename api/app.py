@@ -33,4 +33,4 @@ async def chat(query: str = Query(..., min_length=1)):
 # Health check endpoint
 @app.get("/health")
 async def health():
-    return {"status": "healthy", "service": "rag-chatbot-api", "rag_available": RAG_AVAILABLE}
+    return {"status": "healthy", "service": "rag-chatbot-api", "rag_available": RAG_AVAILABLE}# Last updated: Mon, Dec 29, 2025  8:56:14 PM
