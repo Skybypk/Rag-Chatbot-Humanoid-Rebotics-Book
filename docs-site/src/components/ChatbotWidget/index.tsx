@@ -18,7 +18,7 @@ const ChatbotWidget = (props: ChatbotWidgetProps): JSX.Element => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:8000/api/chat?query=${encodeURIComponent(query.trim())}`
+        `/api/chat?query=${encodeURIComponent(query.trim())}`
       );
       const data = await response.json();
       setAnswer(data.answer);
