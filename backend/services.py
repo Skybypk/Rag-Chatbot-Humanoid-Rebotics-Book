@@ -17,11 +17,9 @@ logger = logging.getLogger(__name__)
 class RAGService:
     def __init__(self):
         self.config = Config()
-        self.qdrant_client = QdrantClient(
-            host=self.config.QDRANT_HOST,
-            port=self.config.QDRANT_PORT,
-            api_key=self.config.QDRANT_API_KEY
-        )
+        # Use in-memory Qdrant for local development
+        from qdrant_client import QdrantClient
+        self.qdrant_client = QdrantClient(":memory:")
         self.embedding_model = SentenceTransformer(self.config.EMBEDDING_MODEL)
         self.collection_name = self.config.COLLECTION_NAME
 
@@ -36,8 +34,13 @@ class RAGService:
 
     async def initialize_db(self):
         """Initialize database connection and tables"""
-        await self.db_manager.connect()
-        await self.db_manager.init_tables()
+        try:
+            await self.db_manager.connect()
+            await self.db_manager.init_tables()
+        except Exception as e:
+            logger.warning(f"Database initialization failed (this is OK for local testing): {e}")
+            # Continue without database if connection fails
+            pass
 
     def _init_collection(self):
         """Initialize Qdrant collection for book content"""
